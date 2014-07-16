@@ -9,6 +9,7 @@ define('ember', [], function() {
   require('ember-handlebars-compiler');
   require('ember-handlebars');
   require('ember-views');
+  require('ember-routing-handlebars');
   require('ember-routing');
   require('ember-application');
 
