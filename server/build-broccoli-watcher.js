@@ -23,9 +23,10 @@ module.exports = function() {
     signalsTrapped = true;
   }
 
-  var watcher = new Watcher(builder);
+  var watcher = new Watcher(builder, {verbose: true});
   watcher.on('change', function(results) {
-    console.log('chanding...');
+    console.log('Built - ' + Math.round(results.totalTime / 1e6) + ' ms')
+    console.log('changing...');
   });
   watcher.on('error', function(err) {
     console.log('error...');
